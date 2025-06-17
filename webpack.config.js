@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './src/main.jsx',
   output: {
-    filename: 'main.js', // 👈 This must match index.html script tag
+    filename: 'main.js', 
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },

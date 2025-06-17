@@ -2,9 +2,9 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="bg-[#031B4E]">
-      <div className="max-w-[1920px] mx-auto px-10 py-4 border-b border-white/20">
-        <div className="flex justify-between items-center flex-wrap gap-6">
+    <div className="bg-[#031B4E] w-full">
+      <div className="max-w-[1920px] mx-auto px-10 py-4 border-b border-white/20 max-md:px-5">
+        <div className="flex justify-between items-center flex-wrap gap-6 w-full max-w-[1240px] mx-auto">
           {/* Logo */}
           <div className="flex items-center">
             <img

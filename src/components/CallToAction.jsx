@@ -2,19 +2,58 @@ import React from "react";
 
 const CallToAction = () => {
   return (
-    <section className="py-16 bg-blue-600 text-white text-center px-6">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Ready to Simplify Your Workflow?
-        </h2>
-        <p className="mb-6 text-lg">
-          Start using Dware today and experience the difference in productivity and ease.
-        </p>
-        <button className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
-          Get Started for Free
-        </button>
+    <div className="pt-7">
+      <div className="flex flex-col justify-center items-center px-10 mt-7 w-full max-w-[1920px] mx-auto max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-1 justify-center pt-20 max-w-full h-full w-[1240px]">
+          <div className="flex flex-1 shrink justify-center items-center basis-0 min-w-60 size-full max-md:max-w-full">
+            <div className="flex relative flex-1 shrink gap-5 justify-center items-end self-stretch my-auto w-full rounded-lg basis-0 bg-slate-950 min-w-60 max-md:max-w-full">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/4b6a53c879c34e03b70122a1f7fb86ae/05521b0430a1386f2a3727a16349339a1188b94e?placeholderIfAbsent=true"
+                className="object-contain absolute right-0 bottom-0 z-0 self-start rounded-lg aspect-[3.77] h-[328px] min-w-60 w-[1240px] max-md:max-w-full"
+                alt="Background decoration"
+              />
+              <div className="flex z-0 flex-col gap-5 items-start p-16 min-w-60 w-[620px] max-md:px-5 max-md:max-w-full">
+                <div className="flex flex-col justify-center text-xs font-medium leading-5 uppercase max-w-[620px] text-slate-950 w-[127px]">
+                  <div className="py-8 pr-8 pl-10 rounded border-solid bg-[#F2EBFF] border-l-[2px] border-l-[#AB7EFF] flex-1 w-full">
+                    <div className="text-xs font-medium leading-[21px]">
+                      Let's get started
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center mt-5 text-5xl font-semibold tracking-tighter leading-none text-white capitalize max-w-[620px] w-[454px] max-md:text-4xl">
+                  <div className="flex-1 w-full max-md:max-w-full max-md:text-4xl">
+                    <div className="font-semibold leading-[56.4px] max-md:max-w-full max-md:text-4xl">
+                      Don't get left behind
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center self-stretch mt-5 w-full text-base leading-7 max-w-[620px] text-slate-50 max-md:max-w-full">
+                  <div className="flex-1 w-full max-md:max-w-full">
+                    <div className="text-base leading-[27.2px] max-md:max-w-full">
+                      Stay ahead of the competition with dwareapps – don't get
+                      left
+                      <br />
+                      behind.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex z-0 flex-col items-end min-w-60 w-[496px] max-md:max-w-full">
+                <div className="flex flex-col justify-center w-full max-w-[496px] max-md:max-w-full">
+                  <div className="flex flex-col flex-1 items-center w-full max-md:max-w-full">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets/4b6a53c879c34e03b70122a1f7fb86ae/81f83087fcb6770c4ceeec475235c447930c304b?placeholderIfAbsent=true"
+                      className="object-contain max-w-full aspect-[0.67] w-[292px]"
+                      alt="Call to action illustration"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
