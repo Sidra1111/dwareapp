@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const TestimonialCard = ({ quote, name, position, avatar, stars }) => {
   return (
@@ -39,6 +39,8 @@ const TestimonialCard = ({ quote, name, position, avatar, stars }) => {
 };
 
 const TestimonialsSection = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   const testimonials = [
     [
       {
@@ -118,17 +120,17 @@ const TestimonialsSection = () => {
 
         <div className="flex z-10 flex-col flex-1 justify-center self-center py-20 max-w-full w-[1240px] relative">
           {/* Header Section */}
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-end mb-12">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-end mb-12 max-md:!grid-cols-1 max-md:!text-center max-md:!gap-6">
             {/* Left: Badge and Title */}
-            <div className="lg:col-span-1">
-              <div className="inline-flex items-center mb-6">
+            <div className="lg:col-span-1 max-md:!text-center max-md:!flex max-md:!flex-col max-md:!items-center">
+              <div className="inline-flex items-center mb-6 max-md:!mx-auto">
                 <div className="bg-[#DDE2FF] border-l-2 border-[#0F1535] rounded px-4 py-2">
-                  <span className="text-xs font-medium uppercase text-slate-950">
+                  <span className="text-lg md:text-xs font-medium uppercase text-slate-950 max-md:!text-lg">
                     Testimonials
                   </span>
                 </div>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight leading-tight text-slate-950">
+              <h2 className="text-5xl lg:text-6xl font-semibold tracking-tight leading-tight text-slate-950 max-md:!text-5xl max-md:!text-center">
                 What our
                 <br />
                 customers say
@@ -136,23 +138,23 @@ const TestimonialsSection = () => {
             </div>
 
             {/* Center: Description */}
-            <div className="lg:col-span-1">
-              <p className="text-base leading-7 text-neutral-600">
+            <div className="lg:col-span-1 max-md:!text-center">
+              <p className="text-lg leading-7 text-neutral-600 max-md:!text-lg max-md:!text-center">
                 Discover what our customers have to say about their experience
                 with ReachOut and the results we've helped them achieve.
               </p>
             </div>
 
             {/* Right: About Us Button */}
-            <div className="lg:col-span-1 flex lg:justify-end">
-              <button className="px-6 py-3 rounded-lg border border-[rgba(17,0,36,0.14)] text-base font-semibold text-slate-950 hover:bg-gray-50 transition-colors">
+            <div className="lg:col-span-1 flex lg:justify-end max-md:!justify-center">
+              <button className="px-6 py-3 rounded-lg border border-[rgba(17,0,36,0.14)] text-lg font-semibold text-slate-950 hover:bg-gray-50 transition-colors max-md:!text-lg">
                 About Us
               </button>
             </div>
           </div>
 
-          {/* Testimonials Grid */}
-          <div className="space-y-6">
+          {/* Desktop Testimonials Grid */}
+          <div className="hidden md:block space-y-6">
             {/* First Row */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials[0].map((testimonial, index) => (
@@ -165,6 +167,74 @@ const TestimonialsSection = () => {
               {testimonials[1].map((testimonial, index) => (
                 <TestimonialCard key={index} {...testimonial} />
               ))}
+            </div>
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden max-md:!block max-md:!w-full">
+            {/* Single Review Card */}
+            <div className="mb-8 max-md:!block">
+              <TestimonialCard
+                {...[...testimonials[0], ...testimonials[1]][currentSlide]}
+              />
+            </div>
+
+            {/* Navigation Arrows */}
+            <div className="flex justify-center items-center gap-6 max-md:!flex max-md:!justify-center max-md:!items-center">
+              <button
+                onClick={() =>
+                  setCurrentSlide((prev) => (prev > 0 ? prev - 1 : 5))
+                }
+                className="p-4 rounded-full bg-slate-900 text-white hover:bg-slate-700 transition-colors max-md:!block"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Slide Indicators */}
+              <div className="flex gap-3 max-md:!flex">
+                {[...testimonials[0], ...testimonials[1]].map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`w-3 h-3 rounded-full transition-colors max-md:!block ${
+                      currentSlide === index ? "bg-slate-900" : "bg-gray-400"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={() =>
+                  setCurrentSlide((prev) => (prev < 5 ? prev + 1 : 0))
+                }
+                className="p-4 rounded-full bg-slate-900 text-white hover:bg-slate-700 transition-colors max-md:!block"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

@@ -45,19 +45,26 @@ function IndustriesWeServe() {
     <div className="bg-white py-16 px-4 md:px-10 lg:px-40 max-w-[1920px] mx-auto w-full">
       <div className="max-w-[1240px] mx-auto">
         {/* Header Section */}
-        <div className="text-center md:text-left mb-16">
-          <div className="inline-flex flex-col justify-center items-start mb-4">
-            <div className="flex flex-col items-start py-2 pr-2 pl-2.5 bg-indigo-100 rounded border-l-2 border-solid border-l-black">
-              <div className="text-xs font-medium leading-5 uppercase text-slate-900">
+        <div className="text-left md:text-left max-md:!text-center mb-16">
+          <div className="flex justify-start md:justify-start max-md:!flex max-md:!justify-center max-md:!w-full mb-4">
+            <div className="flex flex-col items-start md:items-start max-md:!items-center py-3 pr-3 pl-3 bg-indigo-100 rounded border-l-2 border-solid border-l-black">
+              <div className="text-xs md:text-xs max-md:!text-lg font-medium leading-5 uppercase text-slate-900 text-left md:text-left max-md:!text-center">
                 Industries We Serve
               </div>
             </div>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-tight text-black mb-6">
-            Built for Tourism. Designed for More.
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter leading-tight text-black mb-6 text-left md:text-left max-md:!text-center">
+            <span className="hidden md:inline">
+              Built for Tourism. Designed for More.
+            </span>
+            <span className="block md:hidden max-md:!block max-md:!text-center">
+              Built for Tourism.
+              <br />
+              Designed for More.
+            </span>
           </h2>
-          <div className="inline-block">
-            <button className="rounded-lg bg-slate-900 text-base font-semibold tracking-tight leading-8 text-center text-white px-10 py-3 hover:bg-slate-800 transition-colors">
+          <div className="flex justify-start md:justify-start max-md:!flex max-md:!justify-center max-md:!w-full">
+            <button className="rounded-lg bg-slate-900 text-base font-semibold tracking-tight leading-8 text-center text-white px-10 py-3 hover:bg-slate-800 transition-colors max-md:!mx-auto max-md:!block">
               Get Started
             </button>
           </div>
@@ -232,10 +239,10 @@ function IndustriesWeServe() {
                 key={industry.id}
                 className="relative bg-white rounded-lg border border-gray-100 p-6 hover:shadow-lg transition-shadow"
               >
-                <div className="absolute top-4 right-4 font-bold tracking-tighter text-black opacity-10 text-4xl leading-none z-[1]">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold tracking-tighter text-black opacity-10 text-8xl leading-none -z-10">
                   {industry.id}
                 </div>
-                <div className="relative z-[2] space-y-4">
+                <div className="relative z-20 space-y-4">
                   <div className="w-16 h-16 relative">
                     <div className="w-16 h-16 bg-white rounded-3xl shadow-md border border-gray-100" />
                     <div className="absolute top-5 left-5 rounded-xl bg-stone-300 h-[23px] w-[23px]" />

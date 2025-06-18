@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import LogosSections from "./components/LogosSections";
 import IndustriesWeServe from "./components/IndustriesWeServe";
 import HowItWorks from "./components/HowItWorks";
 import AboutTheProject from "./components/AboutTheProject";
@@ -14,15 +15,26 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <IndustriesWeServe />
-      <HowItWorks />
-      <AboutTheProject />
+      <section id="home">
+        <Hero />
+      </section>
+      <LogosSections />
+      <section id="services">
+        <IndustriesWeServe />
+      </section>
+      <section id="about-us">
+        <HowItWorks />
+      </section>
+      <section id="about">
+        <AboutTheProject />
+      </section>
       <PointsSection />
       <TestimonialsSection />
       <CallToAction />
       <FAQ />
-      <Footer />
+      <section id="contact">
+        <Footer />
+      </section>
     </>
   );
 };

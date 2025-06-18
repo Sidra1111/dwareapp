@@ -56,31 +56,31 @@ const FAQ = () => {
     <div className="box-border flex flex-col justify-center items-center px-10 py-0 mx-auto my-0 w-full max-w-[1920px] max-md:px-5 max-md:py-0 max-sm:px-4 max-sm:py-0">
       <div className="box-border flex justify-center items-start px-0 py-20 w-full max-w-[1240px] max-md:px-0 max-md:py-16 max-sm:px-0 max-sm:py-10">
         <div className="box-border flex gap-5 items-start p-2.5 w-full max-md:flex-col max-md:gap-10 max-sm:gap-8 max-sm:p-0">
-          <div className="box-border flex flex-col gap-5 items-start p-2.5 left-[section] w-[496px] max-md:w-full max-md:max-w-full max-sm:gap-4 max-sm:p-0">
-            <div className="flex flex-col justify-center items-start max-w-[496px]">
-              <div className="flex flex-col items-start py-2 pr-2 pl-2.5 bg-purple-100 rounded border-l-2 border-solid border-l-violet-400 w-[102px]">
-                <div className="self-stretch text-xs font-medium leading-5 uppercase text-slate-950 w-[101px]">
+          <div className="box-border flex flex-col gap-5 items-start p-2.5 left-[section] w-[496px] max-md:w-full max-md:max-w-full max-md:items-center max-md:text-center max-sm:gap-4 max-sm:p-0">
+            <div className="flex flex-col justify-center items-start max-w-[496px] max-md:items-center">
+              <div className="flex flex-col items-start py-2 pr-2 pl-2.5 bg-purple-100 rounded border-l-2 border-solid border-l-violet-400 w-[102px] max-md:px-3 max-md:py-2 max-md:w-auto">
+                <div className="self-stretch text-xs font-medium leading-5 uppercase text-slate-950 w-[101px] max-md:w-auto">
                   HELP CENTER
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px]">
-              <div className="flex flex-col items-start self-stretch flex-[1_0_0]">
-                <div className="self-stretch text-5xl font-semibold tracking-tighter capitalize leading-[56.4px] text-slate-950 max-md:text-4xl max-md:leading-10 max-sm:text-3xl max-sm:tracking-tighter max-sm:leading-9">
+            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px] max-md:items-center">
+              <div className="flex flex-col items-start self-stretch flex-[1_0_0] max-md:items-center">
+                <div className="self-stretch text-5xl font-semibold tracking-tighter capitalize leading-[56.4px] text-slate-950 max-md:text-4xl max-md:leading-10 max-md:text-center max-sm:text-3xl max-sm:tracking-tighter max-sm:leading-9">
                   Got A Question? Get Your Answers
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px]">
-              <div className="self-stretch text-base leading-7 flex-[1_0_0] text-neutral-600 max-sm:text-sm max-sm:leading-6">
+            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px] max-md:items-center">
+              <div className="self-stretch text-base leading-7 flex-[1_0_0] text-neutral-600 max-md:text-center max-sm:text-sm max-sm:leading-6">
                 Quick answers to questions you may have. Can't find what you're
                 looking for? Check out our full documentation
               </div>
             </div>
-            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px]">
-              <div className="flex flex-col items-start self-stretch flex-[1_0_0]">
-                <div className="flex flex-col items-start self-stretch">
-                  <button className="flex items-center px-6 py-4 bg-white rounded-lg border border-solid transition-all cursor-pointer border-slate-950 border-opacity-10 duration-[0.2s] ease-[ease] hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 max-sm:px-5 max-sm:py-3.5">
+            <div className="flex flex-col justify-center items-start self-stretch max-w-[496px] max-md:items-center">
+              <div className="flex flex-col items-start self-stretch flex-[1_0_0] max-md:items-center">
+                <div className="flex flex-col items-start self-stretch max-md:items-center">
+                  <button className="flex items-center px-6 py-4 bg-white rounded-lg border border-solid transition-all cursor-pointer border-slate-950 border-opacity-10 duration-[0.2s] ease-[ease] hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-violet-400 focus:ring-offset-2 max-sm:justify-center max-sm:px-5 max-sm:py-3.5">
                     <div className="text-base font-semibold text-center text-slate-950 max-sm:text-sm">
                       View FAQs
                     </div>
