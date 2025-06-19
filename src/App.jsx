@@ -11,6 +11,8 @@ import CallToAction from "./components/CallToAction";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const App = () => {
   return (
     <>
